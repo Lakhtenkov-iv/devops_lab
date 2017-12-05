@@ -56,9 +56,6 @@ def health_values_json():
 
 if COMMON_OUTPUT == 'txt':
 
-    if not os.path.exists(OUTPUT_FILE_NAME):
-        file(OUTPUT_FILE_NAME, 'w').close()
-
     while True:
         file = open(OUTPUT_FILE_NAME, 'a')
         file.write(health_values_txt()+"\n")
@@ -66,9 +63,6 @@ if COMMON_OUTPUT == 'txt':
         sleep(float(COMMON_INTERVAL)*60)
 
 elif COMMON_OUTPUT == 'json':
-
-    if not os.path.exists(OUTPUT_FILE_NAME):
-        file(OUTPUT_FILE_NAME, 'w').close()
 
     while True:
         file = open(OUTPUT_FILE_NAME, 'a')
