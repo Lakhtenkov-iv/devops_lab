@@ -1,9 +1,9 @@
 """Script for 3rd task"""
 input_file = open('input2_3.txt', 'r')
-input = [[int(i) for i in line.split()] for line in input_file]
-width = input[0][0]
-high = input[0][1]
-rectangle_count = input[1][0]
+user_input = [[int(i) for i in line.split()] for line in input_file]
+width = user_input[0][0]
+high = user_input[0][1]
+rectangle_count = user_input[1][0]
 canvas = [[0 for x in range(width)] for y in range(high)]
 
 
