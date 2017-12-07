@@ -1,9 +1,11 @@
 #!/bin/python
 
-"""Script to get PR(Pull Request) statistics from GitHub
+"""Script to get PR(Pull Request) statistics from GitHub"""
+help = """
 Usage:
     pr-stats [options] <user> <repo>
-    User name and password could be defined in config file or promted from stdin
+    GitHub username and password could be defined in config file or promted from stdin
+
     -a, --after:                Show PR opened after this date
     -b, --before:               Show PR opened before this date
     -c, --comments:             Show number of comments created
@@ -46,22 +48,7 @@ def print_version():
 
 
 def help_info():
-    return '''Usage:
-    pr-stats [options] <user> <repo>
-
-    -a, --after:                Show PR opened after this date
-    -b, --before:               Show PR opened before this date
-    -c, --comments:             Show number of comments created
-    -cb, --closed-by:           Show user who closed
-    -dwc, --day-of-week-closed: Show day of the week closed
-    -dwo, --day-of-week-opened: Show day of the week opened
-    -d, --days:                 Show number of days opened
-    -h, --help:                 Show that information
-    -ob, --opened-by:           Show user who opened
-    -s, --statistic:            Show statistics
-    -v, --version:              Show version info
-
-    '''
+    return help
 
 if '--version' in options:
     print print_version()
