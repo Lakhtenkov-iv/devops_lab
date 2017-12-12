@@ -215,3 +215,4 @@ if '-cb' in options or '--closed-by' in options:
 if '-ob' in options or '--opened-by' in options:
     all_pr = read_pages(all_url)
     nice_print(opened_by(shift_if_needed(all_pr)))
+
